@@ -1,15 +1,15 @@
 #creación de la tarea
+from task import tasks
 
-tasks = []
 
 option = 0
 
 while option != 4:
-
+    #menú
     option = int(input('Introduce una opción:'))
     print('1.Agregar Tareas')
     print('2.Eliminar Tareas')
-    print('3.Listar Tareas')
+    print('3.Listar Tareas') 
     print('4.Salir')
 
     if option == 1:
@@ -21,7 +21,7 @@ while option != 4:
         tasks.remove(delete_task_title)
 
     if option == 3:
-      tasks.append(name_task)
+      tasks.append(name_task) 
       print(tasks)
 
     if option == 4:
