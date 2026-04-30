@@ -6,12 +6,13 @@ cat_opcion = 0
 
 while option != 4:
     #menú
-    
+    print('--------------------')
     print('1.Agregar Tareas')
     print('2.Eliminar Tareas')
     print('3.Listar Tareas') 
     print('4.Salir')
-    
+    print('--------------------')
+
     option = int(input('Introduce una opción:')) 
     
     if option == 1:
@@ -56,8 +57,10 @@ while option != 4:
         if len(tasks) == 0:
             print('No hay tareas')
         else:
-            for task in tasks:
-                print('-', task)
+            for task in enumerate(tasks):
+                print(f'- {task}')
 
     elif option == 4:
+        print('Saliendo....') 
         exit()
+ 
