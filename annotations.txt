@@ -1,3 +1,4 @@
 #Warnings
 
 - Fallos a la hora de guardar el diccionario
+- El problema rádica en el diccionario donde guardamos lel titulo y la cateogría 
