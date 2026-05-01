@@ -1,0 +1,3 @@
+#Warnings
+
+- Fallos a la hora de guardar el diccionario

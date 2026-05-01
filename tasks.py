@@ -57,10 +57,10 @@ while option != 4:
         if len(tasks) == 0:
             print('No hay tareas')
         else:
-            for task in enumerate(tasks):
-                print(f'- {task}')
+            for t in task:
+                print(f'- {t['titulo']} - {t['categoria']}')
 
     elif option == 4:
-        print('Saliendo....') 
+        print('Saliendo....')  
         exit()
  
