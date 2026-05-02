@@ -1,14 +1,11 @@
-#creación de la tarea
-from task import tasks
-
+#creación de la tarea 
 
 prioridades = ['Baja','Media','Alta']
 
 option = 0
-
 cat_opcion = 0
-
 prioridad = 0
+id = 0
 
 while option != 4:
     #menú
@@ -26,7 +23,10 @@ while option != 4:
     
     if option == 1: 
         name_task = input('Introduce el titulo de la tarea:')
-        tasks.append(name_task)
+        task.add(name_task)
+        id = id + 1
+
+        task = { "id":id,"titulo":name_task, "cateogría": categoria, "prioridad":prioridad}
 
         print('Selecciona categoría:')
         print('--------------------')
@@ -40,8 +40,6 @@ while option != 4:
 
         prioridad = int(input('Introduce la prioridad de la tarea:'))
         
-        
-
         if prioridad in prioridades:
             if prioridad == 1:
                 prioridad = 'Baja'
@@ -68,24 +66,13 @@ while option != 4:
         else:
             categoria = 'Sin categoria'
 
-        task = {
-            "titulo":name_task,
-
-            "cateogría": categoria,
-            
-            "prioridad":prioridad
-        }
-
-        task.update(task) 
-
-
     elif option == 2:
-        delete_task_title = input('Introduce el titulo a eliminar:')
+        delete_task_title = input('Introduce el id a eliminar:') 
 
         if delete_task_title in tasks:
-            tasks.remove(delete_task_title)
+            del task[id]
         else:
-            print('La tarea no existe')
+            print('El id no existe')
 
     elif option == 3:
         print('Listado de tareas:')
@@ -93,10 +80,10 @@ while option != 4:
         if len(tasks) == 0:
             print('No hay tareas')
         else:
-            for task in tasks:
-                print(f'{task['titulo']} - {task['categoria']} - {task['prioridad']}')
+            for task in task.items():
+                print(task)
 
-    elif option == 4:
+    elif option == 4: 
         print('Saliendo....')  
-        exit()
+        exit() 
  
