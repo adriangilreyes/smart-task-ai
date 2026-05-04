@@ -1,3 +1,5 @@
+import datetime
+
 #diccionario de tareas
 tasks = {}
 
@@ -20,11 +22,13 @@ while True:
         name_task = input('Introduce el nombre de la tarea:')
         category_task = input('Introduce la categoría de la tarea:')
         priority_task = input('Introduce la prioridad de la tarea:')
-        tasks[id_task] = {"id":id_task, "name_task":name_task,"category_task":category_task,"priority_task":priority_task}
+        hour = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
+        tasks[id_task] = {"id":id_task, "name_task":name_task,"category_task":category_task,"priority_task":priority_task,
+        "datetime:":hour}
     
     elif option == 2:
-        id_task = int(input('Introduce el id a eliminar:'))
-        del[id_task]
+        id_to_delete = int(input('Introduce el id a eliminar:'))
+        del tasks[id_to_delete]
 
     elif option == 3:
         for task in tasks.items():
