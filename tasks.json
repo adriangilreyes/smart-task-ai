@@ -1,0 +1,35 @@
+{
+    "1": {
+        "user_name": "Jose",
+        "id": 1,
+        "name_task": "comprar lomo",
+        "category_task": "persona",
+        "priority_task": "2",
+        "datetime:": "04/05/2026 18:16"
+    },
+    "2": {
+        "user_name": "Pepe",
+        "id": 2,
+        "name_task": "hacer granizada",
+        "category_task": "2",
+        "priority_task": "1",
+        "datetime:": "04/05/2026 18:16"
+    },
+    "1": {
+        "user_name": "Luis",
+        "id": 1,
+        "name_task": "comprar azulejos",
+        "category_task": "personal",
+        "priority_task": "2",
+        "datetime:": "04/05/2026 18:20"
+    },
+    "2": {
+        "user_name": "Carlos",
+        "id": 2,
+        "name_task": "comprar golosinas",
+        "category_task": "trabajo",
+        "priority_task": "2",
+        "datetime:": "04/05/2026 18:20"
+    }
+}
+

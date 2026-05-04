@@ -1,4 +1,5 @@
 import datetime
+import json
 
 #diccionario de tareas
 tasks = {}
@@ -7,6 +8,14 @@ tasks = {}
 id_task = 0
 
 option = 0
+
+try:
+    with open("tasks.json","r") as f:
+        tasks = json.load(f) 
+
+except(FileNotFoundError, json.JSONDecodeError):
+    tasks = {}
+
 
 while True:
     print('---------------')
@@ -26,6 +35,9 @@ while True:
         hour = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
         tasks[id_task] = {"user_name":user_name,"id":id_task, "name_task":name_task,"category_task":category_task,"priority_task":priority_task,
         "datetime:":hour}
+
+        with open ("tasks.json","w") as f:
+            json.dump(tasks,f, indent = 4) 
     
     elif option == 2:
         id_to_delete = int(input('Introduce el id a eliminar:'))
